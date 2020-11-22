@@ -1,18 +1,317 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fillViewport="true"
+    android:background="@color/dark_gray"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/movie_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/avengers_background"
+            android:src="@drawable/avengers_mask"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_button_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/backward_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/back_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/back_button"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@id/back_button_icon"
+            app:layout_constraintStart_toEndOf="@id/back_button_icon"
+            app:layout_constraintTop_toTopOf="@id/back_button_icon" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:text="@string/avengers_end_game_title"
+            android:textColor="@color/light_gray"
+            android:textSize="40sp"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintBottom_toTopOf="@+id/movie_background_barrier"
+            app:layout_constraintTop_toTopOf="@+id/movie_background_barrier" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:text="@string/avengers_end_game_rate"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/title"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:text="@string/avengers_end_game_tags"
+            android:textColor="@color/pink"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/movie_background_barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="movie_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/review_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tagline">
+
+            <ImageView
+                android:id="@+id/star_icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/star_icon_active"
+                app:layout_constraintEnd_toStartOf="@+id/star_icon2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/star_icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/star_icon_active"
+                app:layout_constraintEnd_toStartOf="@+id/star_icon3"
+                app:layout_constraintStart_toEndOf="@+id/star_icon1" />
+
+            <ImageView
+                android:id="@+id/star_icon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/star_icon_active"
+                app:layout_constraintEnd_toStartOf="@+id/star_icon4"
+                app:layout_constraintStart_toEndOf="@+id/star_icon2" />
+
+            <ImageView
+                android:id="@+id/star_icon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/star_icon_active"
+                app:layout_constraintEnd_toStartOf="@+id/star_icon5"
+                app:layout_constraintStart_toEndOf="@+id/star_icon3" />
+
+            <ImageView
+                android:id="@+id/star_icon5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/star_icon_inactive"
+                app:layout_constraintStart_toEndOf="@+id/star_icon4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/avengers_end_game_review_count"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/storyline_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_vertical"
+            android:text="@string/storyline"
+            android:textColor="@color/light_gray"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/review_layout" />
+
+        <TextView
+            android:id="@+id/storyline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-light"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/avengers_end_game_storyline"
+            android:textColor="@color/white_transparent_AA"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/storyline_title" />
+
+        <TextView
+            android:id="@+id/cast_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/cast"
+            android:textColor="@color/light_gray"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/storyline" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cast_tile_image1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/downey_jr_icon"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintBottom_toTopOf="@id/cast_tile_name1"
+            app:layout_constraintEnd_toStartOf="@id/cast_tile_image2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cast_title"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cast_tile_image2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/evans_icon"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintBottom_toTopOf="@id/cast_tile_name2"
+            app:layout_constraintEnd_toStartOf="@id/cast_tile_image3"
+            app:layout_constraintStart_toEndOf="@id/cast_tile_image1"
+            app:layout_constraintTop_toBottomOf="@id/cast_title"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cast_tile_image3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ruffalo_icon"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintBottom_toTopOf="@id/cast_tile_name3"
+            app:layout_constraintEnd_toStartOf="@id/cast_tile_image4"
+            app:layout_constraintStart_toEndOf="@id/cast_tile_image2"
+            app:layout_constraintTop_toBottomOf="@id/cast_title"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cast_tile_image4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/hemsworth_icon"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintBottom_toTopOf="@id/cast_tile_name4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cast_tile_image3"
+            app:layout_constraintTop_toBottomOf="@id/cast_title"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+        <TextView
+            android:id="@+id/cast_tile_name1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/avengers_end_game_cast_downey"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/cast_tile_image1"
+            app:layout_constraintStart_toStartOf="@id/cast_tile_image1"
+            app:layout_constraintEnd_toStartOf="@id/cast_tile_name2"
+            app:layout_constraintTop_toBottomOf="@id/cast_tile_image1"
+            />
+
+        <TextView
+            android:id="@+id/cast_tile_name2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/avengers_end_game_cast_evans"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/cast_tile_image2"
+            app:layout_constraintStart_toStartOf="@id/cast_tile_image2"
+            app:layout_constraintTop_toBottomOf="@id/cast_tile_image2"
+            app:layout_constraintEnd_toStartOf="@id/cast_tile_name3"
+            app:layout_constraintStart_toEndOf="@id/cast_tile_name1"
+            />
+
+        <TextView
+            android:id="@+id/cast_tile_name3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/avengers_end_game_cast_ruffalo"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/cast_tile_image3"
+            app:layout_constraintEnd_toEndOf="@id/cast_tile_image3"
+            app:layout_constraintEnd_toStartOf="@id/cast_tile_name4"
+            app:layout_constraintStart_toEndOf="@id/cast_tile_name2"
+            app:layout_constraintTop_toBottomOf="@id/cast_tile_image3"
+            />
+
+        <TextView
+            android:id="@+id/cast_tile_name4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/avengers_end_game_cast_hemsworth"
+            android:textColor="@color/light_gray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/cast_tile_image4"
+            app:layout_constraintEnd_toEndOf="@id/cast_tile_image4"
+            app:layout_constraintStart_toEndOf="@id/cast_tile_name3"
+            app:layout_constraintTop_toBottomOf="@id/cast_tile_image4"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
