@@ -25,26 +25,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/back_button_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="27dp"
-            android:layout_marginTop="60dp"
-            android:src="@drawable/backward_icon"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/back_button_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
             android:text="@string/back_button"
             android:textColor="@color/gray"
-            app:layout_constraintBottom_toBottomOf="@id/back_button_icon"
-            app:layout_constraintStart_toEndOf="@id/back_button_icon"
-            app:layout_constraintTop_toTopOf="@id/back_button_icon" />
+            app:drawableStartCompat="@drawable/ic_path"
+            android:drawablePadding="12dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
         <TextView
             android:id="@+id/title"
@@ -55,9 +48,9 @@
             android:textColor="@color/light_gray"
             android:textSize="40sp"
             android:fontFamily="sans-serif-black"
-            app:layout_constraintBottom_toTopOf="@+id/movie_background_barrier"
-            app:layout_constraintTop_toTopOf="@+id/movie_background_barrier" />
-
+            app:layout_constraintTop_toBottomOf="@id/movie_background"
+            app:layout_constraintBottom_toBottomOf="@+id/movie_background"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,16 +71,6 @@
             android:textSize="14sp"
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/movie_background_barrier"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:barrierDirection="bottom"
-            app:constraint_referenced_ids="movie_background"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
         <LinearLayout
             android:id="@+id/review_layout"
             android:layout_width="wrap_content"
@@ -102,45 +85,42 @@
                 android:id="@+id/star_icon1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:src="@drawable/star_icon_active"
-                app:layout_constraintEnd_toStartOf="@+id/star_icon2"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:layout_marginEnd="@dimen/margin_review_interstar"
+                android:src="@drawable/ic_star_icon"
+                />
 
             <ImageView
                 android:id="@+id/star_icon2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:src="@drawable/star_icon_active"
-                app:layout_constraintEnd_toStartOf="@+id/star_icon3"
-                app:layout_constraintStart_toEndOf="@+id/star_icon1" />
+                android:layout_marginEnd="@dimen/margin_review_interstar"
+                android:src="@drawable/ic_star_icon"
+                />
 
             <ImageView
                 android:id="@+id/star_icon3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:src="@drawable/star_icon_active"
-                app:layout_constraintEnd_toStartOf="@+id/star_icon4"
-                app:layout_constraintStart_toEndOf="@+id/star_icon2" />
+                android:layout_marginEnd="@dimen/margin_review_interstar"
+                android:src="@drawable/ic_star_icon"
+                />
 
             <ImageView
                 android:id="@+id/star_icon4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:src="@drawable/star_icon_active"
-                app:layout_constraintEnd_toStartOf="@+id/star_icon5"
-                app:layout_constraintStart_toEndOf="@+id/star_icon3" />
+                android:layout_marginEnd="@dimen/margin_review_interstar"
+                android:src="@drawable/ic_star_icon"
+                />
 
             <ImageView
                 android:id="@+id/star_icon5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:src="@drawable/star_icon_inactive"
-                app:layout_constraintStart_toEndOf="@+id/star_icon4" />
+                android:layout_marginEnd="@dimen/margin_review_interstar"
+                android:src="@drawable/ic_star_icon"
+                app:tint="@color/gray"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
