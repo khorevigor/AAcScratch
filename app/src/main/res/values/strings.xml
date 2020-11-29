@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">AAcScratch</string>
+    <string name="cast">Cast</string>
+    <string name="storyline">Storyline</string>
+    <string name="back_button">Back</string>
+
+    <string name="avengers_end_game_title">Avengers:\nEnd Game</string>
+    <string name="avengers_end_game_tags">Action, Adventure, Fantasy</string>
+    <string name="avengers_end_game_rate">13+</string>
+    <string name="avengers_end_game_review_count">125 REVIEWS</string>
+    <string name="avengers_end_game_storyline">
+        After the devastating events of Avengers: Infinity War,
+        the universe is in ruins. With the help of remaining allies,
+        the Avengers assemble once more in order to reverse Thanos\'
+        actions and restore balance to the universe.
+    </string>
+    <string name="avengers_end_game_cast_downey">Robert Downey Jr.</string>
+    <string name="avengers_end_game_cast_evans">Chris Evans</string>
+    <string name="avengers_end_game_cast_ruffalo">Mark Ruffalo</string>
+    <string name="avengers_end_game_cast_hemsworth">Chris Hemsworth</string>
 </resources>
