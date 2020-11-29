@@ -3,8 +3,10 @@
     <string name="cast">Cast</string>
     <string name="storyline">Storyline</string>
     <string name="back_button">Back</string>
+    <string name="movies_list_title">Movies list</string>
 
-    <string name="avengers_end_game_title">Avengers:\nEnd Game</string>
+    <string name="avengers_end_game_duration">137 MIN</string>
+    <string name="avengers_end_game_title">Avengers: End Game</string>
     <string name="avengers_end_game_tags">Action, Adventure, Fantasy</string>
     <string name="avengers_end_game_rate">13+</string>
     <string name="avengers_end_game_review_count">125 REVIEWS</string>

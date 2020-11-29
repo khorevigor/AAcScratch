@@ -4,4 +4,8 @@
         parent="">
         <item name="cornerSize">10%</item>
     </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize12dp"
+        parent="">
+        <item name="cornerSize">12dp</item>
+    </style>
 </resources>
