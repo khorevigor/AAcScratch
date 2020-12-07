@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/movieListFragment"
-        android:name="com.dsphoenix.aacscratch.MovieListFragment"
+        android:name="com.dsphoenix.aacscratch.movieslist.MovieListFragment"
         android:label="MovieListFragment" >
         <action
             android:id="@+id/action_movieListFragment_to_movieDetailsFragment3"
@@ -13,6 +13,6 @@
     </fragment>
     <fragment
         android:id="@+id/movieDetailsFragment"
-        android:name="com.dsphoenix.aacscratch.MovieDetailsFragment"
+        android:name="com.dsphoenix.aacscratch.moviedetails.MovieDetailsFragment"
         android:label="MovieDetailsFragment" />
 </navigation>
